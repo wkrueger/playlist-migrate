@@ -1,16 +1,12 @@
-package com.example.playlist_migrate.Song;
+package com.example.playlist_migrate.User;
 
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import com.example.playlist_migrate._Common.MusicService;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,7 +16,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Song {
+public class User {
+
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
@@ -33,19 +30,10 @@ public class Song {
   @Column
   private LocalDateTime updatedAt;
 
-  @Enumerated(EnumType.STRING)
-  @Column(nullable = false)
-  private MusicService musicService;
+  @Column(nullable = false, unique = true)
+  private String username;
 
   @Column(nullable = false)
-  private String name;
+  private String password;
 
-  @Column(nullable = false)
-  private String artist;
-
-  @Column
-  private Long externalId;
-
-  @Column
-  private LocalDateTime syncedAt;
 }

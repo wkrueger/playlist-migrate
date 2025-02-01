@@ -1,6 +1,6 @@
 spring:
   application:
-    name: playlist-migrate
+    name: playlist_migrate
 
   datasource:
     url: jdbc:postgresql://localhost:5432/playlist_migrate

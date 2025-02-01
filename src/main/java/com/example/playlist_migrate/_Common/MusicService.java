@@ -1,4 +1,4 @@
-package com.example.playlist_migrate.Common;
+package com.example.playlist_migrate._Common;
 
 public enum MusicService {
   GLOBAL,
