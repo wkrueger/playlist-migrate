@@ -1,13 +1,13 @@
-package com.example.playlist_migrate;
+package com.example.playlistmigrate.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PlaylistMigrateApplication {
+public class MainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PlaylistMigrateApplication.class, args);
+		SpringApplication.run(MainApplication.class, args);
 	}
 
 }

@@ -1,9 +1,22 @@
 spring:
   application:
-    name: playlist_migrate
-
+    name: main
   datasource:
     url: jdbc:postgresql://localhost:5432/playlist_migrate
     username: postgres
     password: 1234
     driver-class-name: org.postgresql.Driver
+
+  security:
+    oauth2:
+      authorization:
+        server:
+          issuer: http://localhost:8080
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080
+
+logging:
+  pattern:
+    console: |
+      %d{dd-MM-yy HH:mm:ss} %highlight(%-5level) %logger.%M - %msg

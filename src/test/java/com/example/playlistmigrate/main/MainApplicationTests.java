@@ -1,10 +1,10 @@
-package com.example.playlist_migrate;
+package com.example.playlistmigrate.main;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PlaylistMigrateApplicationTests {
+class MainApplicationTests {
 
 	@Test
 	void contextLoads() {
